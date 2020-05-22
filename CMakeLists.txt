@@ -13,6 +13,24 @@ file(GLOB IMGUI_SOURCES
 
 set(IMGUI_STATIC "no" CACHE STRING "Build as a static library")
 
+# Implementations
+option(IMPL_WIN32 "add Win32 implementation" OFF)
+option(IMPL_DX9 "add DX9 implementation" OFF)
+option(IMPL_DX11 "add DX11 implementation" OFF)
+
+if(IMPL_WIN32)
+    list(APPEND IMGUI_SOURCES ./imgui/examples/imgui_impl_win32.cpp)
+endif(IMPL_WIN32)
+
+if(IMPL_DX9)
+    list(APPEND IMGUI_SOURCES ./imgui/examples/imgui_impl_dx9.cpp)
+endif(IMPL_DX9)
+
+if(IMPL_DX11)
+    list(APPEND IMGUI_SOURCES ./imgui/examples/imgui_impl_dx11.cpp)
+endif(IMPL_DX11)
+
+
 #add library and link
 if (IMGUI_STATIC)
     add_library(cimgui STATIC ${IMGUI_SOURCES})
@@ -44,3 +62,4 @@ set(CIMGUI_TEST "no" CACHE STRING "Enable compilation of a test unit based on im
 if (CIMGUI_TEST)
   add_subdirectory(test)
 endif ()
+

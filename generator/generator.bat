@@ -17,7 +17,7 @@ set PATH=%PATH%;C:\anima;C:\mingws\i686-7.2.0-release-posix-dwarf-rt_v5-rev1\min
 :: arg[1] compiler name gcc, clang or cl
 :: arg[2] imgui_internal functions generation: true or false
 :: arg[3..n] name of implementations to generate
-luajit ./generator.lua gcc true glfw opengl3 opengl2 sdl
+luajit ./generator.lua gcc true win32 dx9 dx11
 
 ::leave console open
 cmd /k

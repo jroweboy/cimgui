@@ -1,31 +1,31 @@
 {
-  "ImBitVector_Clear": [
+  "ImBoolVector_Clear": [
     {
-      "args": "(ImBitVector* self)",
+      "args": "(ImBoolVector* self)",
       "argsT": [
         {
           "name": "self",
-          "type": "ImBitVector*"
+          "type": "ImBoolVector*"
         }
       ],
       "argsoriginal": "()",
       "call_args": "()",
-      "cimguiname": "ImBitVector_Clear",
+      "cimguiname": "ImBoolVector_Clear",
       "defaults": [],
       "funcname": "Clear",
-      "ov_cimguiname": "ImBitVector_Clear",
+      "ov_cimguiname": "ImBoolVector_Clear",
       "ret": "void",
       "signature": "()",
-      "stname": "ImBitVector"
+      "stname": "ImBoolVector"
     }
   ],
-  "ImBitVector_ClearBit": [
+  "ImBoolVector_GetBit": [
     {
-      "args": "(ImBitVector* self,int n)",
+      "args": "(ImBoolVector* self,int n)",
       "argsT": [
         {
           "name": "self",
-          "type": "ImBitVector*"
+          "type": "ImBoolVector*"
         },
         {
           "name": "n",
@@ -34,22 +34,37 @@
       ],
       "argsoriginal": "(int n)",
       "call_args": "(n)",
-      "cimguiname": "ImBitVector_ClearBit",
+      "cimguiname": "ImBoolVector_GetBit",
       "defaults": [],
-      "funcname": "ClearBit",
-      "ov_cimguiname": "ImBitVector_ClearBit",
-      "ret": "void",
-      "signature": "(int)",
-      "stname": "ImBitVector"
+      "funcname": "GetBit",
+      "ov_cimguiname": "ImBoolVector_GetBit",
+      "ret": "bool",
+      "signature": "(int)const",
+      "stname": "ImBoolVector"
     }
   ],
-  "ImBitVector_Create": [
+  "ImBoolVector_ImBoolVector": [
     {
-      "args": "(ImBitVector* self,int sz)",
+      "args": "()",
+      "argsT": [],
+      "argsoriginal": "()",
+      "call_args": "()",
+      "cimguiname": "ImBoolVector_ImBoolVector",
+      "constructor": true,
+      "defaults": [],
+      "funcname": "ImBoolVector",
+      "ov_cimguiname": "ImBoolVector_ImBoolVector",
+      "signature": "()",
+      "stname": "ImBoolVector"
+    }
+  ],
+  "ImBoolVector_Resize": [
+    {
+      "args": "(ImBoolVector* self,int sz)",
       "argsT": [
         {
           "name": "self",
-          "type": "ImBitVector*"
+          "type": "ImBoolVector*"
         },
         {
           "name": "sz",
@@ -58,61 +73,60 @@
       ],
       "argsoriginal": "(int sz)",
       "call_args": "(sz)",
-      "cimguiname": "ImBitVector_Create",
+      "cimguiname": "ImBoolVector_Resize",
       "defaults": [],
-      "funcname": "Create",
-      "ov_cimguiname": "ImBitVector_Create",
+      "funcname": "Resize",
+      "ov_cimguiname": "ImBoolVector_Resize",
       "ret": "void",
       "signature": "(int)",
-      "stname": "ImBitVector"
+      "stname": "ImBoolVector"
     }
   ],
-  "ImBitVector_SetBit": [
+  "ImBoolVector_SetBit": [
     {
-      "args": "(ImBitVector* self,int n)",
+      "args": "(ImBoolVector* self,int n,bool v)",
       "argsT": [
         {
           "name": "self",
-          "type": "ImBitVector*"
+          "type": "ImBoolVector*"
         },
         {
           "name": "n",
           "type": "int"
+        },
+        {
+          "name": "v",
+          "type": "bool"
         }
       ],
-      "argsoriginal": "(int n)",
-      "call_args": "(n)",
-      "cimguiname": "ImBitVector_SetBit",
+      "argsoriginal": "(int n,bool v)",
+      "call_args": "(n,v)",
+      "cimguiname": "ImBoolVector_SetBit",
       "defaults": [],
       "funcname": "SetBit",
-      "ov_cimguiname": "ImBitVector_SetBit",
+      "ov_cimguiname": "ImBoolVector_SetBit",
       "ret": "void",
-      "signature": "(int)",
-      "stname": "ImBitVector"
+      "signature": "(int,bool)",
+      "stname": "ImBoolVector"
     }
   ],
-  "ImBitVector_TestBit": [
+  "ImBoolVector_destroy": [
     {
-      "args": "(ImBitVector* self,int n)",
+      "args": "(ImBoolVector* self)",
       "argsT": [
         {
           "name": "self",
-          "type": "ImBitVector*"
-        },
-        {
-          "name": "n",
-          "type": "int"
+          "type": "ImBoolVector*"
         }
       ],
-      "argsoriginal": "(int n)",
-      "call_args": "(n)",
-      "cimguiname": "ImBitVector_TestBit",
+      "call_args": "(self)",
+      "cimguiname": "ImBoolVector_destroy",
       "defaults": [],
-      "funcname": "TestBit",
-      "ov_cimguiname": "ImBitVector_TestBit",
-      "ret": "bool",
-      "signature": "(int)const",
-      "stname": "ImBitVector"
+      "destructor": true,
+      "ov_cimguiname": "ImBoolVector_destroy",
+      "ret": "void",
+      "signature": "(ImBoolVector*)",
+      "stname": "ImBoolVector"
     }
   ],
   "ImChunkStream_alloc_chunk": [
@@ -3832,7 +3846,7 @@
   ],
   "ImFontGlyphRangesBuilder_GetBit": [
     {
-      "args": "(ImFontGlyphRangesBuilder* self,size_t n)",
+      "args": "(ImFontGlyphRangesBuilder* self,int n)",
       "argsT": [
         {
           "name": "self",
@@ -3840,17 +3854,17 @@
         },
         {
           "name": "n",
-          "type": "size_t"
+          "type": "int"
         }
       ],
-      "argsoriginal": "(size_t n)",
+      "argsoriginal": "(int n)",
       "call_args": "(n)",
       "cimguiname": "ImFontGlyphRangesBuilder_GetBit",
       "defaults": [],
       "funcname": "GetBit",
       "ov_cimguiname": "ImFontGlyphRangesBuilder_GetBit",
       "ret": "bool",
-      "signature": "(size_t)const",
+      "signature": "(int)const",
       "stname": "ImFontGlyphRangesBuilder"
     }
   ],
@@ -3871,7 +3885,7 @@
   ],
   "ImFontGlyphRangesBuilder_SetBit": [
     {
-      "args": "(ImFontGlyphRangesBuilder* self,size_t n)",
+      "args": "(ImFontGlyphRangesBuilder* self,int n)",
       "argsT": [
         {
           "name": "self",
@@ -3879,17 +3893,17 @@
         },
         {
           "name": "n",
-          "type": "size_t"
+          "type": "int"
         }
       ],
-      "argsoriginal": "(size_t n)",
+      "argsoriginal": "(int n)",
       "call_args": "(n)",
       "cimguiname": "ImFontGlyphRangesBuilder_SetBit",
       "defaults": [],
       "funcname": "SetBit",
       "ov_cimguiname": "ImFontGlyphRangesBuilder_SetBit",
       "ret": "void",
-      "signature": "(size_t)",
+      "signature": "(int)",
       "stname": "ImFontGlyphRangesBuilder"
     }
   ],
@@ -4265,34 +4279,6 @@
       "stname": "ImFont"
     }
   ],
-  "ImFont_IsGlyphRangeUnused": [
-    {
-      "args": "(ImFont* self,unsigned int c_begin,unsigned int c_last)",
-      "argsT": [
-        {
-          "name": "self",
-          "type": "ImFont*"
-        },
-        {
-          "name": "c_begin",
-          "type": "unsigned int"
-        },
-        {
-          "name": "c_last",
-          "type": "unsigned int"
-        }
-      ],
-      "argsoriginal": "(unsigned int c_begin,unsigned int c_last)",
-      "call_args": "(c_begin,c_last)",
-      "cimguiname": "ImFont_IsGlyphRangeUnused",
-      "defaults": [],
-      "funcname": "IsGlyphRangeUnused",
-      "ov_cimguiname": "ImFont_IsGlyphRangeUnused",
-      "ret": "bool",
-      "signature": "(unsigned int,unsigned int)",
-      "stname": "ImFont"
-    }
-  ],
   "ImFont_IsLoaded": [
     {
       "args": "(ImFont* self)",
@@ -4433,34 +4419,6 @@
       "ov_cimguiname": "ImFont_SetFallbackChar",
       "ret": "void",
       "signature": "(ImWchar)",
-      "stname": "ImFont"
-    }
-  ],
-  "ImFont_SetGlyphVisible": [
-    {
-      "args": "(ImFont* self,ImWchar c,bool visible)",
-      "argsT": [
-        {
-          "name": "self",
-          "type": "ImFont*"
-        },
-        {
-          "name": "c",
-          "type": "ImWchar"
-        },
-        {
-          "name": "visible",
-          "type": "bool"
-        }
-      ],
-      "argsoriginal": "(ImWchar c,bool visible)",
-      "call_args": "(c,visible)",
-      "cimguiname": "ImFont_SetGlyphVisible",
-      "defaults": [],
-      "funcname": "SetGlyphVisible",
-      "ov_cimguiname": "ImFont_SetGlyphVisible",
-      "ret": "void",
-      "signature": "(ImWchar,bool)",
       "stname": "ImFont"
     }
   ],
@@ -4631,30 +4589,6 @@
       "ov_cimguiname": "ImGuiIO_AddInputCharacter",
       "ret": "void",
       "signature": "(unsigned int)",
-      "stname": "ImGuiIO"
-    }
-  ],
-  "ImGuiIO_AddInputCharacterUTF16": [
-    {
-      "args": "(ImGuiIO* self,ImWchar16 c)",
-      "argsT": [
-        {
-          "name": "self",
-          "type": "ImGuiIO*"
-        },
-        {
-          "name": "c",
-          "type": "ImWchar16"
-        }
-      ],
-      "argsoriginal": "(ImWchar16 c)",
-      "call_args": "(c)",
-      "cimguiname": "ImGuiIO_AddInputCharacterUTF16",
-      "defaults": [],
-      "funcname": "AddInputCharacterUTF16",
-      "ov_cimguiname": "ImGuiIO_AddInputCharacterUTF16",
-      "ret": "void",
-      "signature": "(ImWchar16)",
       "stname": "ImGuiIO"
     }
   ],
@@ -14001,27 +13935,6 @@
       "stname": ""
     }
   ],
-  "igGetInputTextState": [
-    {
-      "args": "(ImGuiID id)",
-      "argsT": [
-        {
-          "name": "id",
-          "type": "ImGuiID"
-        }
-      ],
-      "argsoriginal": "(ImGuiID id)",
-      "call_args": "(id)",
-      "cimguiname": "igGetInputTextState",
-      "defaults": [],
-      "funcname": "GetInputTextState",
-      "namespace": "ImGui",
-      "ov_cimguiname": "igGetInputTextState",
-      "ret": "ImGuiInputTextState*",
-      "signature": "(ImGuiID)",
-      "stname": ""
-    }
-  ],
   "igGetItemID": [
     {
       "args": "()",
@@ -14167,22 +14080,6 @@
       "ov_cimguiname": "igGetKeyPressedAmount",
       "ret": "int",
       "signature": "(int,float,float)",
-      "stname": ""
-    }
-  ],
-  "igGetMergedKeyModFlags": [
-    {
-      "args": "()",
-      "argsT": [],
-      "argsoriginal": "()",
-      "call_args": "()",
-      "cimguiname": "igGetMergedKeyModFlags",
-      "defaults": [],
-      "funcname": "GetMergedKeyModFlags",
-      "namespace": "ImGui",
-      "ov_cimguiname": "igGetMergedKeyModFlags",
-      "ret": "ImGuiKeyModFlags",
-      "signature": "()",
       "stname": ""
     }
   ],
@@ -14771,36 +14668,6 @@
       "stname": ""
     }
   ],
-  "igGetWindowScrollbarRect": [
-    {
-      "args": "(ImRect *pOut,ImGuiWindow* window,ImGuiAxis axis)",
-      "argsT": [
-        {
-          "name": "pOut",
-          "type": "ImRect*"
-        },
-        {
-          "name": "window",
-          "type": "ImGuiWindow*"
-        },
-        {
-          "name": "axis",
-          "type": "ImGuiAxis"
-        }
-      ],
-      "argsoriginal": "(ImGuiWindow* window,ImGuiAxis axis)",
-      "call_args": "(window,axis)",
-      "cimguiname": "igGetWindowScrollbarRect",
-      "defaults": [],
-      "funcname": "GetWindowScrollbarRect",
-      "namespace": "ImGui",
-      "nonUDT": 1,
-      "ov_cimguiname": "igGetWindowScrollbarRect",
-      "ret": "void",
-      "signature": "(ImGuiWindow*,ImGuiAxis)",
-      "stname": ""
-    }
-  ],
   "igGetWindowSize": [
     {
       "args": "(ImVec2 *pOut)",
@@ -14836,30 +14703,6 @@
       "ov_cimguiname": "igGetWindowWidth",
       "ret": "float",
       "signature": "()",
-      "stname": ""
-    }
-  ],
-  "igImAlphaBlendColors": [
-    {
-      "args": "(ImU32 col_a,ImU32 col_b)",
-      "argsT": [
-        {
-          "name": "col_a",
-          "type": "ImU32"
-        },
-        {
-          "name": "col_b",
-          "type": "ImU32"
-        }
-      ],
-      "argsoriginal": "(ImU32 col_a,ImU32 col_b)",
-      "call_args": "(col_a,col_b)",
-      "cimguiname": "igImAlphaBlendColors",
-      "defaults": [],
-      "funcname": "ImAlphaBlendColors",
-      "ov_cimguiname": "igImAlphaBlendColors",
-      "ret": "ImU32",
-      "signature": "(ImU32,ImU32)",
       "stname": ""
     }
   ],
@@ -14991,106 +14834,6 @@
       "ov_cimguiname": "igImBezierClosestPointCasteljau",
       "ret": "void",
       "signature": "(const ImVec2,const ImVec2,const ImVec2,const ImVec2,const ImVec2,float)",
-      "stname": ""
-    }
-  ],
-  "igImBitArrayClearBit": [
-    {
-      "args": "(ImU32* arr,int n)",
-      "argsT": [
-        {
-          "name": "arr",
-          "type": "ImU32*"
-        },
-        {
-          "name": "n",
-          "type": "int"
-        }
-      ],
-      "argsoriginal": "(ImU32* arr,int n)",
-      "call_args": "(arr,n)",
-      "cimguiname": "igImBitArrayClearBit",
-      "defaults": [],
-      "funcname": "ImBitArrayClearBit",
-      "ov_cimguiname": "igImBitArrayClearBit",
-      "ret": "void",
-      "signature": "(ImU32*,int)",
-      "stname": ""
-    }
-  ],
-  "igImBitArraySetBit": [
-    {
-      "args": "(ImU32* arr,int n)",
-      "argsT": [
-        {
-          "name": "arr",
-          "type": "ImU32*"
-        },
-        {
-          "name": "n",
-          "type": "int"
-        }
-      ],
-      "argsoriginal": "(ImU32* arr,int n)",
-      "call_args": "(arr,n)",
-      "cimguiname": "igImBitArraySetBit",
-      "defaults": [],
-      "funcname": "ImBitArraySetBit",
-      "ov_cimguiname": "igImBitArraySetBit",
-      "ret": "void",
-      "signature": "(ImU32*,int)",
-      "stname": ""
-    }
-  ],
-  "igImBitArraySetBitRange": [
-    {
-      "args": "(ImU32* arr,int n,int n2)",
-      "argsT": [
-        {
-          "name": "arr",
-          "type": "ImU32*"
-        },
-        {
-          "name": "n",
-          "type": "int"
-        },
-        {
-          "name": "n2",
-          "type": "int"
-        }
-      ],
-      "argsoriginal": "(ImU32* arr,int n,int n2)",
-      "call_args": "(arr,n,n2)",
-      "cimguiname": "igImBitArraySetBitRange",
-      "defaults": [],
-      "funcname": "ImBitArraySetBitRange",
-      "ov_cimguiname": "igImBitArraySetBitRange",
-      "ret": "void",
-      "signature": "(ImU32*,int,int)",
-      "stname": ""
-    }
-  ],
-  "igImBitArrayTestBit": [
-    {
-      "args": "(const ImU32* arr,int n)",
-      "argsT": [
-        {
-          "name": "arr",
-          "type": "const ImU32*"
-        },
-        {
-          "name": "n",
-          "type": "int"
-        }
-      ],
-      "argsoriginal": "(const ImU32* arr,int n)",
-      "call_args": "(arr,n)",
-      "cimguiname": "igImBitArrayTestBit",
-      "defaults": [],
-      "funcname": "ImBitArrayTestBit",
-      "ov_cimguiname": "igImBitArrayTestBit",
-      "ret": "bool",
-      "signature": "(const ImU32*,int)",
       "stname": ""
     }
   ],
@@ -15417,26 +15160,6 @@
       "stname": ""
     }
   ],
-  "igImFontAtlasBuildInit": [
-    {
-      "args": "(ImFontAtlas* atlas)",
-      "argsT": [
-        {
-          "name": "atlas",
-          "type": "ImFontAtlas*"
-        }
-      ],
-      "argsoriginal": "(ImFontAtlas* atlas)",
-      "call_args": "(atlas)",
-      "cimguiname": "igImFontAtlasBuildInit",
-      "defaults": [],
-      "funcname": "ImFontAtlasBuildInit",
-      "ov_cimguiname": "igImFontAtlasBuildInit",
-      "ret": "void",
-      "signature": "(ImFontAtlas*)",
-      "stname": ""
-    }
-  ],
   "igImFontAtlasBuildMultiplyCalcLookupTable": [
     {
       "args": "(unsigned char out_table[256],float in_multiply_factor)",
@@ -15526,6 +15249,26 @@
       "ov_cimguiname": "igImFontAtlasBuildPackCustomRects",
       "ret": "void",
       "signature": "(ImFontAtlas*,void*)",
+      "stname": ""
+    }
+  ],
+  "igImFontAtlasBuildRegisterDefaultCustomRects": [
+    {
+      "args": "(ImFontAtlas* atlas)",
+      "argsT": [
+        {
+          "name": "atlas",
+          "type": "ImFontAtlas*"
+        }
+      ],
+      "argsoriginal": "(ImFontAtlas* atlas)",
+      "call_args": "(atlas)",
+      "cimguiname": "igImFontAtlasBuildRegisterDefaultCustomRects",
+      "defaults": [],
+      "funcname": "ImFontAtlasBuildRegisterDefaultCustomRects",
+      "ov_cimguiname": "igImFontAtlasBuildRegisterDefaultCustomRects",
+      "ret": "void",
+      "signature": "(ImFontAtlas*)",
       "stname": ""
     }
   ],
@@ -19669,7 +19412,7 @@
       "funcname": "PlotEx",
       "namespace": "ImGui",
       "ov_cimguiname": "igPlotEx",
-      "ret": "int",
+      "ret": "void",
       "signature": "(ImGuiPlotType,const char*,float(*)(void*,int),void*,int,int,const char*,float,float,ImVec2)",
       "stname": ""
     }
@@ -19715,14 +19458,14 @@
           "type": "int"
         }
       ],
-      "argsoriginal": "(const char* label,const float* values,int values_count,int values_offset=0,const char* overlay_text=((void*)0),float scale_min=3.40282346638528859811704183484516925e+38F,float scale_max=3.40282346638528859811704183484516925e+38F,ImVec2 graph_size=ImVec2(0,0),int stride=sizeof(float))",
+      "argsoriginal": "(const char* label,const float* values,int values_count,int values_offset=0,const char* overlay_text=((void*)0),float scale_min=3.402823466e+38F,float scale_max=3.402823466e+38F,ImVec2 graph_size=ImVec2(0,0),int stride=sizeof(float))",
       "call_args": "(label,values,values_count,values_offset,overlay_text,scale_min,scale_max,graph_size,stride)",
       "cimguiname": "igPlotHistogram",
       "defaults": {
         "graph_size": "ImVec2(0,0)",
         "overlay_text": "((void*)0)",
-        "scale_max": "FLT_MAX",
-        "scale_min": "FLT_MAX",
+        "scale_max": "3.402823466e+38F",
+        "scale_min": "3.402823466e+38F",
         "stride": "sizeof(float)",
         "values_offset": "0"
       },
@@ -19775,14 +19518,14 @@
           "type": "ImVec2"
         }
       ],
-      "argsoriginal": "(const char* label,float(*values_getter)(void* data,int idx),void* data,int values_count,int values_offset=0,const char* overlay_text=((void*)0),float scale_min=3.40282346638528859811704183484516925e+38F,float scale_max=3.40282346638528859811704183484516925e+38F,ImVec2 graph_size=ImVec2(0,0))",
+      "argsoriginal": "(const char* label,float(*values_getter)(void* data,int idx),void* data,int values_count,int values_offset=0,const char* overlay_text=((void*)0),float scale_min=3.402823466e+38F,float scale_max=3.402823466e+38F,ImVec2 graph_size=ImVec2(0,0))",
       "call_args": "(label,values_getter,data,values_count,values_offset,overlay_text,scale_min,scale_max,graph_size)",
       "cimguiname": "igPlotHistogram",
       "defaults": {
         "graph_size": "ImVec2(0,0)",
         "overlay_text": "((void*)0)",
-        "scale_max": "FLT_MAX",
-        "scale_min": "FLT_MAX",
+        "scale_max": "3.402823466e+38F",
+        "scale_min": "3.402823466e+38F",
         "values_offset": "0"
       },
       "funcname": "PlotHistogram",
@@ -19834,14 +19577,14 @@
           "type": "int"
         }
       ],
-      "argsoriginal": "(const char* label,const float* values,int values_count,int values_offset=0,const char* overlay_text=((void*)0),float scale_min=3.40282346638528859811704183484516925e+38F,float scale_max=3.40282346638528859811704183484516925e+38F,ImVec2 graph_size=ImVec2(0,0),int stride=sizeof(float))",
+      "argsoriginal": "(const char* label,const float* values,int values_count,int values_offset=0,const char* overlay_text=((void*)0),float scale_min=3.402823466e+38F,float scale_max=3.402823466e+38F,ImVec2 graph_size=ImVec2(0,0),int stride=sizeof(float))",
       "call_args": "(label,values,values_count,values_offset,overlay_text,scale_min,scale_max,graph_size,stride)",
       "cimguiname": "igPlotLines",
       "defaults": {
         "graph_size": "ImVec2(0,0)",
         "overlay_text": "((void*)0)",
-        "scale_max": "FLT_MAX",
-        "scale_min": "FLT_MAX",
+        "scale_max": "3.402823466e+38F",
+        "scale_min": "3.402823466e+38F",
         "stride": "sizeof(float)",
         "values_offset": "0"
       },
@@ -19894,14 +19637,14 @@
           "type": "ImVec2"
         }
       ],
-      "argsoriginal": "(const char* label,float(*values_getter)(void* data,int idx),void* data,int values_count,int values_offset=0,const char* overlay_text=((void*)0),float scale_min=3.40282346638528859811704183484516925e+38F,float scale_max=3.40282346638528859811704183484516925e+38F,ImVec2 graph_size=ImVec2(0,0))",
+      "argsoriginal": "(const char* label,float(*values_getter)(void* data,int idx),void* data,int values_count,int values_offset=0,const char* overlay_text=((void*)0),float scale_min=3.402823466e+38F,float scale_max=3.402823466e+38F,ImVec2 graph_size=ImVec2(0,0))",
       "call_args": "(label,values_getter,data,values_count,values_offset,overlay_text,scale_min,scale_max,graph_size)",
       "cimguiname": "igPlotLines",
       "defaults": {
         "graph_size": "ImVec2(0,0)",
         "overlay_text": "((void*)0)",
-        "scale_max": "FLT_MAX",
-        "scale_min": "FLT_MAX",
+        "scale_max": "3.402823466e+38F",
+        "scale_min": "3.402823466e+38F",
         "values_offset": "0"
       },
       "funcname": "PlotLines",
@@ -20768,12 +20511,8 @@
   ],
   "igRenderCheckMark": [
     {
-      "args": "(ImDrawList* draw_list,ImVec2 pos,ImU32 col,float sz)",
+      "args": "(ImVec2 pos,ImU32 col,float sz)",
       "argsT": [
-        {
-          "name": "draw_list",
-          "type": "ImDrawList*"
-        },
         {
           "name": "pos",
           "type": "ImVec2"
@@ -20787,26 +20526,22 @@
           "type": "float"
         }
       ],
-      "argsoriginal": "(ImDrawList* draw_list,ImVec2 pos,ImU32 col,float sz)",
-      "call_args": "(draw_list,pos,col,sz)",
+      "argsoriginal": "(ImVec2 pos,ImU32 col,float sz)",
+      "call_args": "(pos,col,sz)",
       "cimguiname": "igRenderCheckMark",
       "defaults": [],
       "funcname": "RenderCheckMark",
       "namespace": "ImGui",
       "ov_cimguiname": "igRenderCheckMark",
       "ret": "void",
-      "signature": "(ImDrawList*,ImVec2,ImU32,float)",
+      "signature": "(ImVec2,ImU32,float)",
       "stname": ""
     }
   ],
   "igRenderColorRectWithAlphaCheckerboard": [
     {
-      "args": "(ImDrawList* draw_list,ImVec2 p_min,ImVec2 p_max,ImU32 fill_col,float grid_step,ImVec2 grid_off,float rounding,int rounding_corners_flags)",
+      "args": "(ImVec2 p_min,ImVec2 p_max,ImU32 fill_col,float grid_step,ImVec2 grid_off,float rounding,int rounding_corners_flags)",
       "argsT": [
-        {
-          "name": "draw_list",
-          "type": "ImDrawList*"
-        },
         {
           "name": "p_min",
           "type": "ImVec2"
@@ -20836,8 +20571,8 @@
           "type": "int"
         }
       ],
-      "argsoriginal": "(ImDrawList* draw_list,ImVec2 p_min,ImVec2 p_max,ImU32 fill_col,float grid_step,ImVec2 grid_off,float rounding=0.0f,int rounding_corners_flags=~0)",
-      "call_args": "(draw_list,p_min,p_max,fill_col,grid_step,grid_off,rounding,rounding_corners_flags)",
+      "argsoriginal": "(ImVec2 p_min,ImVec2 p_max,ImU32 fill_col,float grid_step,ImVec2 grid_off,float rounding=0.0f,int rounding_corners_flags=~0)",
+      "call_args": "(p_min,p_max,fill_col,grid_step,grid_off,rounding,rounding_corners_flags)",
       "cimguiname": "igRenderColorRectWithAlphaCheckerboard",
       "defaults": {
         "rounding": "0.0f"
@@ -20846,7 +20581,7 @@
       "namespace": "ImGui",
       "ov_cimguiname": "igRenderColorRectWithAlphaCheckerboard",
       "ret": "void",
-      "signature": "(ImDrawList*,ImVec2,ImVec2,ImU32,float,ImVec2,float,int)",
+      "signature": "(ImVec2,ImVec2,ImU32,float,ImVec2,float,int)",
       "stname": ""
     }
   ],
@@ -24182,7 +23917,7 @@
       "stname": ""
     }
   ],
-  "igTempInputIsActive": [
+  "igTempInputTextIsActive": [
     {
       "args": "(ImGuiID id)",
       "argsT": [
@@ -24193,17 +23928,17 @@
       ],
       "argsoriginal": "(ImGuiID id)",
       "call_args": "(id)",
-      "cimguiname": "igTempInputIsActive",
+      "cimguiname": "igTempInputTextIsActive",
       "defaults": [],
-      "funcname": "TempInputIsActive",
+      "funcname": "TempInputTextIsActive",
       "namespace": "ImGui",
-      "ov_cimguiname": "igTempInputIsActive",
+      "ov_cimguiname": "igTempInputTextIsActive",
       "ret": "bool",
       "signature": "(ImGuiID)",
       "stname": ""
     }
   ],
-  "igTempInputScalar": [
+  "igTempInputTextScalar": [
     {
       "args": "(const ImRect bb,ImGuiID id,const char* label,ImGuiDataType data_type,void* p_data,const char* format)",
       "argsT": [
@@ -24234,54 +23969,13 @@
       ],
       "argsoriginal": "(const ImRect& bb,ImGuiID id,const char* label,ImGuiDataType data_type,void* p_data,const char* format)",
       "call_args": "(bb,id,label,data_type,p_data,format)",
-      "cimguiname": "igTempInputScalar",
+      "cimguiname": "igTempInputTextScalar",
       "defaults": [],
-      "funcname": "TempInputScalar",
+      "funcname": "TempInputTextScalar",
       "namespace": "ImGui",
-      "ov_cimguiname": "igTempInputScalar",
+      "ov_cimguiname": "igTempInputTextScalar",
       "ret": "bool",
       "signature": "(const ImRect,ImGuiID,const char*,ImGuiDataType,void*,const char*)",
-      "stname": ""
-    }
-  ],
-  "igTempInputText": [
-    {
-      "args": "(const ImRect bb,ImGuiID id,const char* label,char* buf,int buf_size,ImGuiInputTextFlags flags)",
-      "argsT": [
-        {
-          "name": "bb",
-          "type": "const ImRect"
-        },
-        {
-          "name": "id",
-          "type": "ImGuiID"
-        },
-        {
-          "name": "label",
-          "type": "const char*"
-        },
-        {
-          "name": "buf",
-          "type": "char*"
-        },
-        {
-          "name": "buf_size",
-          "type": "int"
-        },
-        {
-          "name": "flags",
-          "type": "ImGuiInputTextFlags"
-        }
-      ],
-      "argsoriginal": "(const ImRect& bb,ImGuiID id,const char* label,char* buf,int buf_size,ImGuiInputTextFlags flags)",
-      "call_args": "(bb,id,label,buf,buf_size,flags)",
-      "cimguiname": "igTempInputText",
-      "defaults": [],
-      "funcname": "TempInputText",
-      "namespace": "ImGui",
-      "ov_cimguiname": "igTempInputText",
-      "ret": "bool",
-      "signature": "(const ImRect,ImGuiID,const char*,char*,int,ImGuiInputTextFlags)",
       "stname": ""
     }
   ],

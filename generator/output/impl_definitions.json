@@ -1,5 +1,5 @@
 {
-  "ImGui_ImplGlfw_CharCallback": [
+  "ImGui_ImplDX11_CreateDeviceObjects": [
     {
       "args": "(GLFWwindow* window,unsigned int c)",
       "argsT": [
@@ -185,21 +185,17 @@
       "stname": ""
     }
   ],
-  "ImGui_ImplGlfw_ScrollCallback": [
+  "ImGui_ImplDX11_Init": [
     {
-      "args": "(GLFWwindow* window,double xoffset,double yoffset)",
+      "args": "(ID3D11Device* device,ID3D11DeviceContext* device_context)",
       "argsT": [
         {
-          "name": "window",
-          "type": "GLFWwindow*"
+          "name": "device",
+          "type": "ID3D11Device*"
         },
         {
-          "name": "xoffset",
-          "type": "double"
-        },
-        {
-          "name": "yoffset",
-          "type": "double"
+          "name": "device_context",
+          "type": "ID3D11DeviceContext*"
         }
       ],
       "argsoriginal": "(GLFWwindow* window,double xoffset,double yoffset)",
@@ -242,11 +238,11 @@
       "location": "imgui_impl_opengl2:30",
       "ov_cimguiname": "ImGui_ImplOpenGL2_CreateDeviceObjects",
       "ret": "bool",
-      "signature": "()",
+      "signature": "(ID3D11Device*,ID3D11DeviceContext*)",
       "stname": ""
     }
   ],
-  "ImGui_ImplOpenGL2_CreateFontsTexture": [
+  "ImGui_ImplDX11_InvalidateDeviceObjects": [
     {
       "args": "()",
       "argsT": [],
@@ -278,7 +274,7 @@
       "stname": ""
     }
   ],
-  "ImGui_ImplOpenGL2_DestroyFontsTexture": [
+  "ImGui_ImplDX11_NewFrame": [
     {
       "args": "()",
       "argsT": [],
@@ -294,7 +290,7 @@
       "stname": ""
     }
   ],
-  "ImGui_ImplOpenGL2_Init": [
+  "ImGui_ImplDX11_RenderDrawData": [
     {
       "args": "()",
       "argsT": [],
@@ -347,7 +343,7 @@
       "stname": ""
     }
   ],
-  "ImGui_ImplOpenGL2_Shutdown": [
+  "ImGui_ImplDX11_Shutdown": [
     {
       "args": "()",
       "argsT": [],
@@ -363,7 +359,7 @@
       "stname": ""
     }
   ],
-  "ImGui_ImplOpenGL3_CreateDeviceObjects": [
+  "ImGui_ImplDX9_CreateDeviceObjects": [
     {
       "args": "()",
       "argsT": [],
@@ -379,7 +375,7 @@
       "stname": ""
     }
   ],
-  "ImGui_ImplOpenGL3_CreateFontsTexture": [
+  "ImGui_ImplDX9_Init": [
     {
       "args": "()",
       "argsT": [],
@@ -391,11 +387,11 @@
       "location": "imgui_impl_opengl3:34",
       "ov_cimguiname": "ImGui_ImplOpenGL3_CreateFontsTexture",
       "ret": "bool",
-      "signature": "()",
+      "signature": "(IDirect3DDevice9*)",
       "stname": ""
     }
   ],
-  "ImGui_ImplOpenGL3_DestroyDeviceObjects": [
+  "ImGui_ImplDX9_InvalidateDeviceObjects": [
     {
       "args": "()",
       "argsT": [],
@@ -411,7 +407,7 @@
       "stname": ""
     }
   ],
-  "ImGui_ImplOpenGL3_DestroyFontsTexture": [
+  "ImGui_ImplDX9_NewFrame": [
     {
       "args": "()",
       "argsT": [],
@@ -427,7 +423,7 @@
       "stname": ""
     }
   ],
-  "ImGui_ImplOpenGL3_Init": [
+  "ImGui_ImplDX9_RenderDrawData": [
     {
       "args": "(const char* glsl_version)",
       "argsT": [
@@ -487,7 +483,7 @@
       "stname": ""
     }
   ],
-  "ImGui_ImplOpenGL3_Shutdown": [
+  "ImGui_ImplDX9_Shutdown": [
     {
       "args": "()",
       "argsT": [],
@@ -503,7 +499,7 @@
       "stname": ""
     }
   ],
-  "ImGui_ImplSDL2_InitForD3D": [
+  "ImGui_ImplWin32_EnableDpiAwareness": [
     {
       "args": "(SDL_Window* window)",
       "argsT": [
@@ -524,13 +520,13 @@
       "stname": ""
     }
   ],
-  "ImGui_ImplSDL2_InitForMetal": [
+  "ImGui_ImplWin32_GetDpiScaleForHwnd": [
     {
-      "args": "(SDL_Window* window)",
+      "args": "(void* hwnd)",
       "argsT": [
         {
-          "name": "window",
-          "type": "SDL_Window*"
+          "name": "hwnd",
+          "type": "void*"
         }
       ],
       "argsoriginal": "(SDL_Window* window)",
@@ -545,16 +541,12 @@
       "stname": ""
     }
   ],
-  "ImGui_ImplSDL2_InitForOpenGL": [
+  "ImGui_ImplWin32_GetDpiScaleForMonitor": [
     {
-      "args": "(SDL_Window* window,void* sdl_gl_context)",
+      "args": "(void* monitor)",
       "argsT": [
         {
-          "name": "window",
-          "type": "SDL_Window*"
-        },
-        {
-          "name": "sdl_gl_context",
+          "name": "monitor",
           "type": "void*"
         }
       ],
@@ -570,13 +562,13 @@
       "stname": ""
     }
   ],
-  "ImGui_ImplSDL2_InitForVulkan": [
+  "ImGui_ImplWin32_Init": [
     {
-      "args": "(SDL_Window* window)",
+      "args": "(void* hwnd)",
       "argsT": [
         {
-          "name": "window",
-          "type": "SDL_Window*"
+          "name": "hwnd",
+          "type": "void*"
         }
       ],
       "argsoriginal": "(SDL_Window* window)",
@@ -587,11 +579,11 @@
       "location": "imgui_impl_sdl:24",
       "ov_cimguiname": "ImGui_ImplSDL2_InitForVulkan",
       "ret": "bool",
-      "signature": "(SDL_Window*)",
+      "signature": "(void*)",
       "stname": ""
     }
   ],
-  "ImGui_ImplSDL2_NewFrame": [
+  "ImGui_ImplWin32_NewFrame": [
     {
       "args": "(SDL_Window* window)",
       "argsT": [
@@ -608,11 +600,11 @@
       "location": "imgui_impl_sdl:28",
       "ov_cimguiname": "ImGui_ImplSDL2_NewFrame",
       "ret": "void",
-      "signature": "(SDL_Window*)",
+      "signature": "()",
       "stname": ""
     }
   ],
-  "ImGui_ImplSDL2_ProcessEvent": [
+  "ImGui_ImplWin32_Shutdown": [
     {
       "args": "(const SDL_Event* event)",
       "argsT": [

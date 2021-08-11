@@ -30,6 +30,43 @@ if(IMGUI_FREETYPE)
 	add_definitions("-DCIMGUI_FREETYPE=1")
 endif(IMGUI_FREETYPE)
 
+# Implementations
+option(IMPL_WIN32 "add Win32 implementation" OFF)
+option(IMPL_DX9 "add DX9 implementation" OFF)
+option(IMPL_DX11 "add DX11 implementation" OFF)
+option(IMPL_GLFW "add GLFW implementation" OFF)
+option(IMPL_OGL3 "add OpenGL3 implementation" OFF)
+option(IMPL_OGL2 "add OpenGL2 implementation" OFF)
+option(IMPL_SDL "add SDL implementation" OFF)
+
+if(IMPL_WIN32)
+    list(APPEND IMGUI_SOURCES ./imgui/backends/imgui_impl_win32.cpp)
+endif(IMPL_WIN32)
+
+if(IMPL_DX9)
+    list(APPEND IMGUI_SOURCES ./imgui/backends/imgui_impl_dx9.cpp)
+endif(IMPL_DX9)
+
+if(IMPL_DX11)
+    list(APPEND IMGUI_SOURCES ./imgui/backends/imgui_impl_dx11.cpp)
+endif(IMPL_DX11)
+
+if(IMPL_GLFW)
+    list(APPEND IMGUI_SOURCES ./imgui/backends/imgui_impl_glfw.cpp)
+endif(IMPL_GLFW)
+
+if(IMPL_OGL3)
+    list(APPEND IMGUI_SOURCES ./imgui/backends/imgui_impl_opengl3.cpp)
+endif(IMPL_OGL3)
+
+if(IMPL_OGL2)
+    list(APPEND IMGUI_SOURCES ./imgui/backends/imgui_impl_opengl2.cpp)
+endif(IMPL_OGL2)
+
+if(IMPL_SDL)
+    list(APPEND IMGUI_SOURCES ./imgui/backends/imgui_impl_sdl.cpp)
+endif(IMPL_SDL)
+
 #add library and link
 if (IMGUI_STATIC)
     add_library(cimgui STATIC ${IMGUI_SOURCES})
@@ -63,3 +100,4 @@ set(CIMGUI_TEST "no" CACHE STRING "Enable compilation of a test unit based on im
 if (CIMGUI_TEST)
   add_subdirectory(test)
 endif ()
+

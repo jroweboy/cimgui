@@ -12,6 +12,7 @@ CIMGUI_API void ImGui_ImplWin32_NewFrame();
 CIMGUI_API void ImGui_ImplWin32_EnableDpiAwareness();
 CIMGUI_API float ImGui_ImplWin32_GetDpiScaleForHwnd(void* hwnd);
 CIMGUI_API float ImGui_ImplWin32_GetDpiScaleForMonitor(void* monitor);
+CIMGUI_API void ImGui_ImplWin32_EnableAlphaCompositing(void* hwnd);
 CIMGUI_API bool ImGui_ImplDX9_Init(IDirect3DDevice9* device);
 CIMGUI_API void ImGui_ImplDX9_Shutdown();
 CIMGUI_API void ImGui_ImplDX9_NewFrame();

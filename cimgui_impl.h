@@ -114,6 +114,7 @@ CIMGUI_API bool ImGui_ImplVulkan_CreateFontsTexture(VkCommandBuffer command_buff
 CIMGUI_API void ImGui_ImplVulkan_DestroyFontUploadObjects(void);
 CIMGUI_API void ImGui_ImplVulkan_SetMinImageCount(uint32_t min_image_count);
 CIMGUI_API VkDescriptorSet ImGui_ImplVulkan_AddTexture(VkSampler sampler,VkImageView image_view,VkImageLayout image_layout);
+CIMGUI_API void ImGui_ImplVulkan_RemoveTexture(VkDescriptorSet descriptor_set);
 CIMGUI_API bool ImGui_ImplVulkan_LoadFunctions(PFN_vkVoidFunction(*loader_func)(const char* function_name,void* user_data),void* user_data);
 CIMGUI_API void ImGui_ImplVulkanH_CreateOrResizeWindow(VkInstance instance,VkPhysicalDevice physical_device,VkDevice device,ImGui_ImplVulkanH_Window* wnd,uint32_t queue_family,const VkAllocationCallbacks* allocator,int w,int h,uint32_t min_image_count);
 CIMGUI_API void ImGui_ImplVulkanH_DestroyWindow(VkInstance instance,VkDevice device,ImGui_ImplVulkanH_Window* wnd,const VkAllocationCallbacks* allocator);
@@ -134,6 +135,7 @@ CIMGUI_API void ImGui_ImplGlfw_Shutdown(void);
 CIMGUI_API void ImGui_ImplGlfw_NewFrame(void);
 CIMGUI_API void ImGui_ImplGlfw_InstallCallbacks(GLFWwindow* window);
 CIMGUI_API void ImGui_ImplGlfw_RestoreCallbacks(GLFWwindow* window);
+CIMGUI_API void ImGui_ImplGlfw_SetCallbacksChainForAllWindows(bool chain_for_all_windows);
 CIMGUI_API void ImGui_ImplGlfw_WindowFocusCallback(GLFWwindow* window,int focused);
 CIMGUI_API void ImGui_ImplGlfw_CursorEnterCallback(GLFWwindow* window,int entered);
 CIMGUI_API void ImGui_ImplGlfw_CursorPosCallback(GLFWwindow* window,double x,double y);
@@ -166,7 +168,7 @@ CIMGUI_API bool ImGui_ImplOpenGL2_CreateDeviceObjects(void);
 CIMGUI_API void ImGui_ImplOpenGL2_DestroyDeviceObjects(void);
 
 #endif
-#ifdef CIMGUI_USE_SDL
+#ifdef CIMGUI_USE_SDL2
 
 typedef struct SDL_Window SDL_Window;
 typedef struct SDL_Renderer SDL_Renderer;

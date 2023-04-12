@@ -22,4 +22,4 @@ then
   suffix='.exe'
 fi
 
-luajit$suffix ./generator.lua gcc "internal" win32 dx9 dx11 dx12 vulkan glfw opengl3 opengl2 sdl
+luajit$suffix ./generator.lua gcc "internal" win32 dx9 dx11 dx12 vulkan glfw opengl3 opengl2 sdl2

@@ -1228,7 +1228,7 @@
       "cimguiname": "ImGui_ImplVulkanH_CreateOrResizeWindow",
       "defaults": {},
       "funcname": "ImGui_ImplVulkanH_CreateOrResizeWindow",
-      "location": "imgui_impl_vulkan:104",
+      "location": "imgui_impl_vulkan:106",
       "ov_cimguiname": "ImGui_ImplVulkanH_CreateOrResizeWindow",
       "ret": "void",
       "signature": "(VkInstance,VkPhysicalDevice,VkDevice,ImGui_ImplVulkanH_Window*,uint32_t,const VkAllocationCallbacks*,int,int,uint32_t)",
@@ -1261,7 +1261,7 @@
       "cimguiname": "ImGui_ImplVulkanH_DestroyWindow",
       "defaults": {},
       "funcname": "ImGui_ImplVulkanH_DestroyWindow",
-      "location": "imgui_impl_vulkan:105",
+      "location": "imgui_impl_vulkan:107",
       "ov_cimguiname": "ImGui_ImplVulkanH_DestroyWindow",
       "ret": "void",
       "signature": "(VkInstance,VkDevice,ImGui_ImplVulkanH_Window*,const VkAllocationCallbacks*)",
@@ -1282,7 +1282,7 @@
       "cimguiname": "ImGui_ImplVulkanH_GetMinImageCountFromPresentMode",
       "defaults": {},
       "funcname": "ImGui_ImplVulkanH_GetMinImageCountFromPresentMode",
-      "location": "imgui_impl_vulkan:108",
+      "location": "imgui_impl_vulkan:110",
       "ov_cimguiname": "ImGui_ImplVulkanH_GetMinImageCountFromPresentMode",
       "ret": "int",
       "signature": "(VkPresentModeKHR)",
@@ -1315,7 +1315,7 @@
       "cimguiname": "ImGui_ImplVulkanH_SelectPresentMode",
       "defaults": {},
       "funcname": "ImGui_ImplVulkanH_SelectPresentMode",
-      "location": "imgui_impl_vulkan:107",
+      "location": "imgui_impl_vulkan:109",
       "ov_cimguiname": "ImGui_ImplVulkanH_SelectPresentMode",
       "ret": "VkPresentModeKHR",
       "signature": "(VkPhysicalDevice,VkSurfaceKHR,const VkPresentModeKHR*,int)",
@@ -1352,7 +1352,7 @@
       "cimguiname": "ImGui_ImplVulkanH_SelectSurfaceFormat",
       "defaults": {},
       "funcname": "ImGui_ImplVulkanH_SelectSurfaceFormat",
-      "location": "imgui_impl_vulkan:106",
+      "location": "imgui_impl_vulkan:108",
       "ov_cimguiname": "ImGui_ImplVulkanH_SelectSurfaceFormat",
       "ret": "VkSurfaceFormatKHR",
       "signature": "(VkPhysicalDevice,VkSurfaceKHR,const VkFormat*,int,VkColorSpaceKHR)",
@@ -1369,7 +1369,7 @@
       "constructor": true,
       "defaults": {},
       "funcname": "ImGui_ImplVulkanH_Window",
-      "location": "imgui_impl_vulkan:149",
+      "location": "imgui_impl_vulkan:151",
       "ov_cimguiname": "ImGui_ImplVulkanH_Window_ImGui_ImplVulkanH_Window",
       "signature": "()",
       "stname": "ImGui_ImplVulkanH_Window"
@@ -1416,7 +1416,7 @@
       "cimguiname": "ImGui_ImplVulkan_AddTexture",
       "defaults": {},
       "funcname": "ImGui_ImplVulkan_AddTexture",
-      "location": "imgui_impl_vulkan:78",
+      "location": "imgui_impl_vulkan:79",
       "ov_cimguiname": "ImGui_ImplVulkan_AddTexture",
       "ret": "VkDescriptorSet",
       "signature": "(VkSampler,VkImageView,VkImageLayout)",
@@ -1498,14 +1498,14 @@
           "type": "void*"
         }
       ],
-      "argsoriginal": "(PFN_vkVoidFunction(*loader_func)(const char* function_name,void* user_data),void* user_data=((void*)0))",
+      "argsoriginal": "(PFN_vkVoidFunction(*loader_func)(const char* function_name,void* user_data),void* user_data=nullptr)",
       "call_args": "(user_data),user_data)",
       "cimguiname": "ImGui_ImplVulkan_LoadFunctions",
       "defaults": {
-        "user_data": "NULL"
+        "user_data": "nullptr"
       },
       "funcname": "ImGui_ImplVulkan_LoadFunctions",
-      "location": "imgui_impl_vulkan:82",
+      "location": "imgui_impl_vulkan:84",
       "ov_cimguiname": "ImGui_ImplVulkan_LoadFunctions",
       "ret": "bool",
       "signature": "(PFN_vkVoidFunction(*loader_func)(const char* function_name,void*,void*)",
@@ -1525,6 +1525,27 @@
       "ov_cimguiname": "ImGui_ImplVulkan_NewFrame",
       "ret": "void",
       "signature": "()",
+      "stname": ""
+    }
+  ],
+  "ImGui_ImplVulkan_RemoveTexture": [
+    {
+      "args": "(VkDescriptorSet descriptor_set)",
+      "argsT": [
+        {
+          "name": "descriptor_set",
+          "type": "VkDescriptorSet"
+        }
+      ],
+      "argsoriginal": "(VkDescriptorSet descriptor_set)",
+      "call_args": "(descriptor_set)",
+      "cimguiname": "ImGui_ImplVulkan_RemoveTexture",
+      "defaults": {},
+      "funcname": "ImGui_ImplVulkan_RemoveTexture",
+      "location": "imgui_impl_vulkan:80",
+      "ov_cimguiname": "ImGui_ImplVulkan_RemoveTexture",
+      "ret": "void",
+      "signature": "(VkDescriptorSet)",
       "stname": ""
     }
   ],
